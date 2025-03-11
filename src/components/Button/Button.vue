@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 import type { ButtonProps } from './types';
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 defineOptions({
   name: 'vkButton'
@@ -33,9 +33,6 @@ const {nativeType = 'button'} = defineProps<ButtonProps>();
 
 const _ref = ref<HTMLButtonElement>();
 
-onMounted(() => {
-  console.log(_ref.value);
-});
 
 defineExpose({
   ref: _ref
