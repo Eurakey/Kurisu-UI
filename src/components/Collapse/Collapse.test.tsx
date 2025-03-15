@@ -54,7 +54,7 @@ describe('Collapse.vue', () => {
     // 行为
     await firstHeader.trigger('click')
     expect(firstContent.isVisible()).toBeFalsy()
-    await secondHeader.trigger('click')
+    await secondHeader.trigger('click') 
     expect(secondContent.isVisible()).toBeTruthy()
   })
   test('发送正确的事件', () => {
