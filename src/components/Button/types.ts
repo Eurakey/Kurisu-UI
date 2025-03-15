@@ -1,8 +1,9 @@
-type ButtonType = 'primary' | 'danger' | 'info' | 'success' | 'warning';
-type ButtonSize = 'small' | 'medium' | 'large';
-type NativeType = 'button' | 'submit' | 'reset';
+import type { PropType } from 'vue'
+export type ButtonType = 'primary'| 'success'| 'warning'| 'danger'| 'info'
+export type ButtonSize = 'large' | 'small'
+export type NativeType = 'button' | 'submit' | 'reset'
 
-interface ButtonProps {
+export interface ButtonProps {
   type?: ButtonType;
   size?: ButtonSize;
   plain?: boolean;
@@ -11,10 +12,29 @@ interface ButtonProps {
   disabled?: boolean;
   nativeType?: NativeType;
   autofocus?: boolean;
+  icon?: string;
+  loading?: boolean;
 }
-
-interface ButtonInstance {
-  ref: HTMLButtonElement;
+export interface ButtonInstance {
+  ref: HTMLButtonElement
 }
-
-export type { ButtonType, ButtonSize, ButtonProps, NativeType, ButtonInstance };
+export const buttonProps = {
+  type: {
+    type: String as PropType<ButtonType>
+  },
+  size: {
+    type: String as PropType<ButtonSize>,
+  },
+  plain: {
+    type: Boolean
+  },
+  round: {
+    type: Boolean
+  },
+  circle: {
+    type: Boolean
+  },
+  disabled: {
+    type: Boolean
+  },
+}

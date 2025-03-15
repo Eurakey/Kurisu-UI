@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-env node */
 module.exports = {
   plugins: [
@@ -13,4 +12,4 @@ module.exports = {
       }
     }),
   ]
-};
+}
