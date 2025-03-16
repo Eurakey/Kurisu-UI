@@ -2,7 +2,7 @@ import { describe, test, expect, vi, beforeAll } from 'vitest'
 import { mount } from '@vue/test-utils'
 import type { VueWrapper, DOMWrapper } from '@vue/test-utils'
 import Collapse from './Collapse.vue'
-import CollapseItem from './CollapseItem.vue'
+import CollapseItem from './CollapseItem.vue' 
 const onChange = vi.fn()
 let wrapper: VueWrapper
 let headers: DOMWrapper<Element>[], contents: DOMWrapper<Element>[]
