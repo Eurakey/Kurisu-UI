@@ -1,8 +1,11 @@
-import { defineConfig } from 'vitepress'
-import { fileURLToPath, URL } from 'node:url'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import VueMacros from 'unplugin-vue-macros'
-import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
+import { defineConfig } from "vitepress";
+import { fileURLToPath, URL } from "node:url";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import VueMacros from "unplugin-vue-macros";
+import {
+  containerPreview,
+  componentPreview,
+} from "@vitepress-demo-preview/plugin";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "My Awesome Project",
@@ -14,48 +17,51 @@ export default defineConfig({
         setupSFC: false,
         plugins: {
           vueJsx: vueJsx(),
-        },
+        },  
       }),
     ],
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('../../src', import.meta.url))
-      }
-    }
+        "@": fileURLToPath(new URL("../../src", import.meta.url)),
+      },
+    },
   },
   markdown: {
     config(md) {
-      md.use(containerPreview)
-      md.use(componentPreview)
-    }
+      md.use(containerPreview);
+      md.use(componentPreview);
+    },
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
-      { text: 'Test', link: '/markdown-examples' }
+      { text: "Home", link: "/" },
+      { text: "Examples", link: "/markdown-examples" },
+      { text: "Test", link: "/markdown-examples" },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "Examples",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-          { text: 'Test here', link: '/api-examples' }
-        ]
+          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "Test here", link: "/api-examples" },
+        ],
       },
       {
-        text: 'Basic',
+        text: "Basic",
         items: [
-          {text: 'Button', link: '/components/button' }
-        ]
-      }
+          { text: "Button", link: "/components/button" },
+          { text: "Input", link: "/components/input" },
+          { text: "Select", link: "/components/select" },
+          { text: "switch", link: "/components/switch" },
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+    ],
+  },
+});
