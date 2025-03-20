@@ -35,4 +35,4 @@ describe('Tooltip.vue', () => {
     expect(wrapper.find('.vk-tooltip__popper').exists()).toBeFalsy()
     expect(onVisibleChange).toHaveBeenLastCalledWith(false)
   })
-});
+})

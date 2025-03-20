@@ -17,7 +17,7 @@ export default defineConfig({
         setupSFC: false,
         plugins: {
           vueJsx: vueJsx(),
-        },  
+        },
       }),
     ],
     resolve: {
@@ -53,9 +53,10 @@ export default defineConfig({
         text: "Basic",
         items: [
           { text: "Button", link: "/components/button" },
+          { text: "Form", link: "/components/form" },
           { text: "Input", link: "/components/input" },
           { text: "Select", link: "/components/select" },
-          { text: "switch", link: "/components/switch" },
+          { text: "Switch", link: "/components/switch" },
         ],
       },
     ],

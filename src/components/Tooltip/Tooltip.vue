@@ -114,7 +114,7 @@ const attachEvents = () => {
   } else if (props.trigger === 'click') {
     events['click'] = togglePopper
   }
-};
+}
 if (!props.manual) {
   attachEvents()
 }
